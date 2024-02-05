@@ -43,6 +43,7 @@ def predict(clf,
 
     '''
     clf.eval()
+    loss = None
     pred_list, loss_list = [], []
     for i in range(0, len(x_test), eval_batch_size):
         bs_x_test = x_test.iloc[i:i+eval_batch_size]
